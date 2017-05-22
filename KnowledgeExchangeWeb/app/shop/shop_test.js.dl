@@ -1,0 +1,16 @@
+'use strict';
+
+describe('myApp.shop module', function() {
+
+  beforeEach(module('myApp.shop'));
+
+  describe('shop controller', function(){
+
+    it('should ....', inject(function($controller) {
+      //spec body
+      var shopCtrl = $controller('ShopCtrl');
+      expect(shopCtrl).toBeDefined();
+    }));
+
+  });
+});

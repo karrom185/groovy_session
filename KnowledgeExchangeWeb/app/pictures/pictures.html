@@ -1,0 +1,63 @@
+<!-- Page Content -->
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-2">
+            <p class="lead">Shop Name</p>
+            <div class="list-group">
+                <a ng-repeat="cat in categories" ng-href="{{'#!/pictures/' + cat.id}}" class="list-group-item">{{cat.name}}</a>
+
+            </div>
+        </div>
+
+        <div class="col-md-10">
+
+            <div class="row carousel-holder">
+
+                <div class="col-md-12">
+                    <div uib-carousel active="active" no-wrap="nowrap" interval="intervalSlides">
+                        <div uib-slide  ng-repeat="slide in carouselItems" index="$index">
+                            <img ng-src="{{'/img/' + slide.name}}" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div  ng-repeat="pic in pictures">
+                    <div class="clearfix" ng-if="$index % 3 == 0"></div>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="" alt="" ng-src="{{'/img/' + pic.name}}">
+                            <div class="caption">
+                                <h4 class="pull-right">$0.00</h4>
+                                <h4><a href="#">{{pic.name}}</a>
+                                </h4>
+                                <p>See more snippets like this online store item at <a target="_blank"
+                                                                                       href="http://www.bootsnipp.com">Bootsnipp
+                                    - http://bootsnipp.com</a>.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">15 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
