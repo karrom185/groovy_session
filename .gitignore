@@ -1,3 +1,7 @@
 .idea
 .gradles
 .~lock.*
+*.h2.db
+*.trace.db
+.gradle
+build

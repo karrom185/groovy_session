@@ -12,9 +12,9 @@ class DbInitializer {
                 sql.execute 'create table picture( id INT , name VARCHAR(100), author VARCHAR(100), category int)'
 
                 [
-                        [id: 1, author: 'Unknown', category: 1, name: 'animal/duckling-birds-yellow-fluffy-162140.jpeg'],
-                        [id: 2, author: 'Unknown', category: 1, name: 'animal/hedgehog-animal-baby-cute-50577.jpeg'],
-                        [id: 3, author: 'Unknown', category: 1, name: 'animal/kittens-cat-cat-puppy-rush-45170.jpeg'],
+                        [id: 1, author: 'Somebody', category: 1, name: 'animal/duckling-birds-yellow-fluffy-162140.jpeg'],
+                        [id: 2, author: 'Anybody', category: 1, name: 'animal/hedgehog-animal-baby-cute-50577.jpeg'],
+                        [id: 3, author: 'John Doe', category: 1, name: 'animal/kittens-cat-cat-puppy-rush-45170.jpeg'],
                         [id: 4, author: 'Unknown', category: 1, name: 'animal/owl-glitter-stuffed-animal-cute.jpg'],
                         [id: 5, author: 'Unknown', category: 1, name: 'animal/pexels-photo-134058.jpeg'],
                         [id: 6, author: 'Unknown', category: 1, name: 'animal/pexels-photo-169727.jpeg'],
