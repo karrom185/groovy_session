@@ -1,3 +1,4 @@
+package forjava
 import models.Picture
 
 def pictures = [
