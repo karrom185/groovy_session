@@ -4,7 +4,8 @@ class GroovyDemo {
 
     def list = [1, 2, 3, 4, 5]
     String[] array = [1, 2, 3, 4, 5]
-    def someMap = ['1': 'Item 1', '2': 'Item 2', '3': 'Item 3']
+    def index = 4
+    def someMap = ['1': 'Item 1', '2': 'Item 2', '3': 'Item 3', "$index": 'Item 4', Item5: 'Item5']
     def closure = { int i -> i + 1 }
 
     def cols = [list, array, someMap, ArrayList, closure]
@@ -40,6 +41,9 @@ class GroovyDemo {
         println someMap.get('2')
         println someMap.getAt('2')
 
+        def (one, two,_,__, five) = list
+
+        println one + two + five
 
     }
 

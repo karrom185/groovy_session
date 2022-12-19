@@ -1,3 +1,8 @@
+GET http://localhost:9998/pictures/pictures
+
+> {% client.log(JSON.stringify(JSON.parse(response.body), null, 2)) %}
+###
+
 GET http://localhost:9998/pictures/pictures/2
 
 > {% client.log(JSON.stringify(JSON.parse(response.body), null, 2)) %}

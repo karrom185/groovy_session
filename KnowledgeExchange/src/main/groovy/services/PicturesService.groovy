@@ -18,6 +18,12 @@ class PicturesService {
         new Picture(id: it.id, name: it.name, author: it.author, category: it.category)
     }
 
+    def pictureParserWith = {picture ->
+        picture.with {
+            new Picture(id: id, name: name, author: author, category: category)
+        }
+    }
+
     def categoryParser = {
         new Category(id: it.id, name: it.name)
     }
@@ -27,7 +33,7 @@ class PicturesService {
     def listAllPictures() {
         SqlConnectionFactory.withNewInstance {
             sql ->
-                JsonOutput.toJson sql.rows('SELECT * FROM picture').collect(pictureParser)
+                JsonOutput.toJson sql.rows('SELECT * FROM picture').collect(pictureParserWith)
         }
     }
 
